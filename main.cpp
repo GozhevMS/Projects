@@ -127,7 +127,7 @@ node* removeTree(node* root)
         return NULL;
     }
 }
-//---------------------------------Обход по возрастанию-----------------------------------------\\
+//---------------------------------Обход по возрастанию-----------------------------------------
 
 void printTree(node *x){
    if (x != NULL){
@@ -136,7 +136,7 @@ void printTree(node *x){
       printTree(x->right);
    }
 }
-//------------------------------------Обход в ширину--------------------------------------------\\
+//------------------------------------Обход в ширину--------------------------------------------
 
 void levelOrderPrint(node *root) {
     if (root == NULL) {return;}
@@ -193,14 +193,15 @@ int main()
     printTree(z);
     cout<<endl<<endl;
     levelOrderPrint(z);
-    cout<<endl<<endl;
+    /*cout<<endl<<endl;
     z->left->right=removeTree(z->left->right);
     levelOrderPrint(z);
     z=insertNode(z, 23);
     z=insertNode(z, 25);
     z=insertNode(z, 28);
     cout<<endl<<endl;
-    levelOrderPrint(z);
+    levelOrderPrint(z);*/
+    removeTree(z);
 
     return 0;
 }
