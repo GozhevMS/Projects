@@ -9,15 +9,15 @@ struct Node{
 class Container
 {
 public:
-    // Виртуальные методы, должны быть реализованы вашим контейнером
+
     virtual void insert(int value) = 0;
     virtual bool exists(int value) = 0;
     virtual void remove(int value) = 0;
 
-    // И этот тоже, хотя к нему потом ещё вернёмся
+
     virtual void print() = 0;
 
-    // Виртуальный деструктор (пока просто поверьте, что он нужен)
+
     virtual ~Container() { };
 };
 
@@ -26,7 +26,7 @@ class LinkedList: public Container{
     Node* head;
     public:
     LinkedList(){
-        this->head = NULL; //первого элемента пока нет
+        this->head = NULL;
     }
     ~LinkedList(){
 
