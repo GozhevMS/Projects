@@ -24,6 +24,11 @@ public:
 class LinkedList: public Container{
     private:
     Node* head;
+    void removeList(Node* hd){
+        if(hd->next != NULL)
+            removeList(hd->next);
+        delete hd;
+    }
     public:
     LinkedList(){
         this->head = NULL;
@@ -31,11 +36,7 @@ class LinkedList: public Container{
     ~LinkedList(){
         removeList(this->head);
     }
-    void removeList(Node* hd){
-        if(hd->next != NULL)
-            removeList(hd->next);
-        remove hd;
-    }
+
     void insert(int value){
         Node *nd = new Node;
         nd->data = value;
