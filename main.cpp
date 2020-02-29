@@ -29,7 +29,12 @@ class LinkedList: public Container{
         this->head = NULL;
     }
     ~LinkedList(){
-
+        removeList(this->head);
+    }
+    void removeList(Node* hd){
+        if(hd->next != NULL)
+            removeList(hd->next);
+        remove hd;
     }
     void insert(int value){
         Node *nd = new Node;
